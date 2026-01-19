@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 
     return {
         paths: posts.map(post => ({
-            params: { id: post.id }
+            params: { id: post.id.toString() }
         })),
         fallback: true
     };
